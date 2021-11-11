@@ -26,6 +26,10 @@ module OmniAuth
                         get("#{API_HOST}/v2/users/current").
                         parsed["user"]
       end
+
+      def callback_url
+        full_host + callback_path
+      end
     end
   end
 end
